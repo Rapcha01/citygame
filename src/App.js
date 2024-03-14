@@ -1,5 +1,5 @@
-import SearchAutocomplete from "./components/search-autocomplete api";
-
+//import SearchAutocomplete from "./components/search-autocomplete api";
+import TicTacToe from "./components/Tik-tac-toe";
 
 
 
@@ -7,8 +7,10 @@ import SearchAutocomplete from "./components/search-autocomplete api";
 function App() {
   return (
     <div className="App">
-      <SearchAutocomplete/>
-    </div>
+     {/* <SearchAutocomplete/> */}
+     {/**Tic Tac toe */}
+     <TicTacToe/>
+         </div>
   );
 }
 
