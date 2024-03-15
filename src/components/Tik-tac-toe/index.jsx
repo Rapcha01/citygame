@@ -56,10 +56,10 @@ export default function TicTacToe() {
   }
 
   useEffect(() => {
-    if (getWinner(squares)) {
+    if (!getWinner(squares) && squares.every((item) => item !=="")) {
+      setStatus(`this is a draw !Please restart`)
+    } else if (getWinner(squares)) {
       setStatus(`Winner is ${getWinner(squares)}`);
-    } else if (!getWinner(squares) && squares.every((item) => item !== " ")) {
-      setStatus(`this is a draw !Please restart`);
     } else {
       setStatus(`Next Player is ${isXTurn ? "X" : "0"}`);
     }
