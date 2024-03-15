@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "./style.css";
 
+//create a function that updates the squares
+
 function Square({ value, onClick }) {
   return (
     <button onClick={onClick} className="squares">
@@ -10,11 +12,15 @@ function Square({ value, onClick }) {
   );
 }
 
+//create a default function and remember to export
 export default function TicTacToe() {
+
+  //set state using use state
   const [squares, setSquares] = useState(Array(9).fill(""));
   const [isXTurn, setIsXTurn] = useState(true);
   const [status, setStatus] = useState("");
 
+  //create a function that will store the winning pattern 
   function getWinner(squares) {
     const winningPatterns = [
       [0, 1, 2],
@@ -38,7 +44,7 @@ export default function TicTacToe() {
       return null;
     }
   }
-
+// handles when the user clicks
   function handleClick(getCurrentSquare) {
     let cpySquares = [...squares];
     if (getWinner(cpySquares) || cpySquares[getCurrentSquare]) return;
@@ -48,8 +54,8 @@ export default function TicTacToe() {
   }
 
   useEffect(() => {
-    if (!getWinner(squares) && squares.every(item => item !== " ") ){
-      setSquares(`this is a draw !Please restart`);
+    if (!getWinner(squares) && squares.every((item) => item !== " ") ){
+      setStatus(`this is a draw !Please restart`);
     } else if (getWinner(squares)) {
       setStatus(`Winner is ${getWinner(squares)}`);
     } else {
