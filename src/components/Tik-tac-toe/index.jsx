@@ -14,13 +14,12 @@ function Square({ value, onClick }) {
 
 //create a default function and remember to export
 export default function TicTacToe() {
-
   //set state using use state
   const [squares, setSquares] = useState(Array(9).fill(""));
   const [isXTurn, setIsXTurn] = useState(true);
   const [status, setStatus] = useState("");
 
-  //create a function that will store the winning pattern 
+  //create a function that will store the winning pattern
   function getWinner(squares) {
     const winningPatterns = [
       [0, 1, 2],
@@ -37,27 +36,29 @@ export default function TicTacToe() {
       const [x, y, z] = winningPatterns[i];
 
       if (
-        squares[x]  === squares[y]  === squares[z]
+        squares[x] &&
+        squares[x] === squares[y] &&
+        squares[x] === squares[z]
       ) {
         return squares[x];
       }
       return null;
     }
   }
-// handles when the user clicks
+  // handles when the user clicks
   function handleClick(getCurrentSquare) {
     let cpySquares = [...squares];
-    if (getWinner(cpySquares) || cpySquares[getCurrentSquare]) return;
+    if ( cpySquares[getCurrentSquare]) return;
     cpySquares[getCurrentSquare] = isXTurn ? "X" : "O";
     setIsXTurn(!isXTurn);
     setSquares(cpySquares);
   }
 
   useEffect(() => {
-    if (!getWinner(squares) && squares.every((item) => item !== " ") ){
-      setStatus(`this is a draw !Please restart`);
-    } else if (getWinner(squares)) {
+    if (getWinner(squares)) {
       setStatus(`Winner is ${getWinner(squares)}`);
+    } else if (!getWinner(squares) && squares.every((item) => item !== " ")) {
+      setStatus(`this is a draw !Please restart`);
     } else {
       setStatus(`Next Player is ${isXTurn ? "X" : "0"}`);
     }
