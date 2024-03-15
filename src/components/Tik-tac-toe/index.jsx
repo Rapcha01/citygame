@@ -42,8 +42,9 @@ export default function TicTacToe() {
       ) {
         return squares[x];
       }
-      return null;
+      
     }
+    return null;
   }
   // handles when the user clicks
   function handleClick(getCurrentSquare) {
