@@ -49,7 +49,7 @@ export default function TicTacToe() {
   // handles when the user clicks
   function handleClick(getCurrentSquare) {
     let cpySquares = [...squares];
-    if ( cpySquares[getCurrentSquare]) return;
+    if ( getWinner(cpySquares) || cpySquares[getCurrentSquare]) return;
     cpySquares[getCurrentSquare] = isXTurn ? "X" : "O";
     setIsXTurn(!isXTurn);
     setSquares(cpySquares);
