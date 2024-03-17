@@ -1,16 +1,15 @@
 //import SearchAutocomplete from "./components/search-autocomplete api";
-import TicTacToe from "./components/Tik-tac-toe";
-
-
-
-
+//import TicTacToe from "./components/Tik-tac-toe";
+import CssStyleGame from "./components/cssplaysheet";
 function App() {
   return (
     <div className="App">
-     {/* <SearchAutocomplete/> */}
-     {/**Tic Tac toe */}
-     <TicTacToe/>
-         </div>
+      {/* <SearchAutocomplete/> */}
+      {/**Tic Tac toe */}
+      {/* <TicTacToe/> */}
+
+      <CssStyleGame />
+    </div>
   );
 }
 

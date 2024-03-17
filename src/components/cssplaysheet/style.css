@@ -1,0 +1,43 @@
+
+
+body {
+    display :flex;
+    align-items : center;
+    justify-content: center;
+    margin :0 auto;
+    height : 100vh;
+    background-color: white;
+
+}
+.container  {
+    background-color: blue;
+    width : 200px;
+    padding: 0px;
+    height : 200px;
+    border-color: black;
+
+    
+
+}
+
+.child  {
+
+    
+    height: 50%;
+    padding: 0px;
+    width: 50%;
+        
+    background-color: red;
+    transition: transform 1s;
+    
+  }
+
+  .container:hover  .child {
+     transform: translateX(100);
+     animation : left-to-right ease-in;
+  }
+
+
+@keyframes left-to-right {
+    transform: translateX(100%);
+}
