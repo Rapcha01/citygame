@@ -1,7 +1,8 @@
 //import SearchAutocomplete from "./components/search-autocomplete api";
 //import TicTacToe from "./components/Tik-tac-toe";
 //import CssStyleGame from "./components/cssplaysheet";
-import UseonClickOutsideHook from "./components/use-outside-click";
+//import UseonClickOutsideHook from "./components/use-outside-click";
+import UseWindowResizeTest from "./components/useWindowSize/test";
 //import Use
 
 function App() {
@@ -15,7 +16,10 @@ function App() {
 
       {/*<UseFetchHookTest/>*/}
       {/* Use onclick outside hook*/}
-      <UseonClickOutsideHook/>
+      {/*<UseonClickOutsideHook/>*/}
+
+      {/* Use Window Resize hook test*/}
+      <UseWindowResizeTest/>
     </div>
   );
 }
