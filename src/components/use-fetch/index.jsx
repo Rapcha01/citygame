@@ -1,5 +1,5 @@
 //create default function(url , options = {})
-// impletment state ( data, pending, error)
+// implement state ( data, pending, error)
 //create a use effect with url a s dependecies
 //create a async function fecthData
 
@@ -31,7 +31,7 @@ export default function UseFetch(url, options ={}){
     useEffect(() => {
         fetchData()
 
-    },[url] )
+    },[url ] )
 
     return {data, error, pending};
 

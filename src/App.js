@@ -1,7 +1,8 @@
 //import SearchAutocomplete from "./components/search-autocomplete api";
 //import TicTacToe from "./components/Tik-tac-toe";
 //import CssStyleGame from "./components/cssplaysheet";
-import UseFetchHookTest from "./components/use-fetch/test";
+import UseonClickOutsideHook from "./components/use-outside-click";
+//import Use
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
 
       {/*<CssStyleGame />*/}
 
-      <UseFetchHookTest/>
+      {/*<UseFetchHookTest/>*/}
+      {/* Use onclick outside hook*/}
+      <UseonClickOutsideHook/>
     </div>
   );
 }
